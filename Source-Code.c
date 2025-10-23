@@ -73,16 +73,20 @@ void add_car_to_end (car_t* actualcar){
 //Prints all cars of the existing list.
 
 void print_list (){
+	//Fallunterscheidung: Leere Liste -> return; andernfalls Elemente drucken
 	if (!carslist.end) {
 		printf("Empty list\n");
+		return;
 	}
-	car_t *p = carslist.start;
+	else {
+		car_t *p = carslist.start;
 
-	while (p != NULL) {
-	printf("Name: %s\n", p->name);
-	printf("Age: %i\n", p->age);
-	printf("Retail price: %.2f€\n\n", p->retail_price);
-	p = p->next;
+		while (p != NULL) {
+			printf("Name: %s\n", p->name);
+			printf("Age: %i\n", p->age);
+			printf("Retail price: %.2f€\n\n", p->retail_price);
+			p = p->next;
+		}
 	}
 }
 
