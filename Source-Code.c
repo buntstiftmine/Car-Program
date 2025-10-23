@@ -15,6 +15,19 @@ typedef struct {
 
 }car_t;
 
+class Car{
+	private:
+	std::string name;
+	int age;		
+	float retail_price;
+	Car* prev;
+	Car* next;
+
+	public:
+	Car(){
+		//add code here!!
+	}
+}
 typedef struct {
         car_t *start;
         car_t *end;
